@@ -1,36 +1,150 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Auth + Dashboard App
 
-## Getting Started
+A modern full-stack web application built for a **Frontend Developer Intern shortlisting assignment**.
+The project focuses on **clean UI, strong frontend structure, secure authentication**, and **smooth frontend–backend integration**.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Features
+
+### Authentication
+
+- Signup & Login
+- Client-side form validation
+- Secure password hashing
+- JWT-based authentication
+- HTTP-only cookies
+- Logout functionality
+
+### Dashboard
+
+- Protected route (accessible only after login)
+- Displays authenticated user info
+- Task management (CRUD)
+  - Create task
+  - View task list
+  - Edit task inline
+  - Delete task
+- Error states & loading handling
+- Clean, minimal UI with subtle transitions
+
+---
+
+## 🧱 Tech Stack
+
+### Frontend
+
+- Next.js (App Router)
+- React
+- Tailwind CSS v4
+- Component-driven UI architecture
+- Global styling via `globals.css`
+
+### Backend
+
+- Next.js Route Handlers
+- MongoDB + Mongoose
+- JWT authentication
+- Zod for request validation
+
+---
+
+## 📁 Project Structure
+
+app/
+├── (auth)/login
+├── (auth)/signup
+├── dashboard
+├── api/v1
+│ ├── auth
+│ ├── me
+│ └── tasks
+components/
+├── Button.tsx
+├── Card.tsx
+├── Container.tsx
+├── Input.tsx
+└── PageHeader.tsx
+lib/
+├── auth.ts
+├── db.ts
+└── validators.ts
+models/
+├── User.ts
+└── Task.ts
+
+---
+
+
+## ⚙️ Setup Instructions
+
+### 1. Clone the repository
+
+```
+git clone <repository-url>
+cd <repository-name>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install dependencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3. Environment variables
 
-## Learn More
+Create a `.env.local` file in the root:
 
-To learn more about Next.js, take a look at the following resources:
+```
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 4. Run the application
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+npm run dev
 
-## Deploy on Vercel
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Open:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[http://localhost:3000](http://localhost:3000)
+
+---
+
+## Demo Usage
+
+* Create a new account using the signup page
+* Login to access the dashboard
+* Manage tasks from the dashboard UI
+
+---
+
+## How Would You Scale This for Production?
+
+* Use a managed secret store for environment variables
+* Add refresh tokens and token rotation
+* Implement role-based access control
+* Add database indexes for frequently queried fields
+* Introduce pagination for large task lists
+* Add rate limiting on auth routes
+* Add centralized logging and monitoring
+* Configure strict CORS and security headers
+* Deploy using Vercel with managed MongoDB
+
+---
+
+## Notes
+
+* The project is intentionally kept **simple and focused**
+* No unnecessary abstractions or overengineering
+* Emphasis on **frontend quality, structure, and UX**
+
+---
+
+## 👤 Author
+
+##### Naman singh rathaur - Frontend Developer Intern Candidate
+
+###### email - namansingh99694@gmail.com
