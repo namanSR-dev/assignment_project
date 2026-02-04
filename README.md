@@ -51,6 +51,7 @@ The project focuses on **clean UI, strong frontend structure, secure authenticat
 
 ## 📁 Project Structure
 
+```
 app/
 ├── (auth)/login
 ├── (auth)/signup
@@ -72,16 +73,16 @@ lib/
 models/
 ├── User.ts
 └── Task.ts
+```
 
 ---
-
 
 ## ⚙️ Setup Instructions
 
 ### 1. Clone the repository
 
 ```
-git clone <repository-url>
+git clone https://github.com/namanSR-dev/assignment_project.git
 cd <repository-name>
 ```
 
